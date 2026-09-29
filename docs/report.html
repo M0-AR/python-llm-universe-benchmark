@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Universe Benchmark — Report Dashboard</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#0b1020;color:#e8ecf8}
+header{padding:28px 32px;background:linear-gradient(135deg,#1a2456,#0b1020);border-bottom:1px solid #2a3566}
+h1{margin:0;font-size:28px} p.sub{color:#aab4d8}
+main{padding:24px 32px;max-width:1100px;margin:auto}
+.card{background:#141b3a;border:1px solid #2a3566;border-radius:12px;padding:18px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.kpi{font-size:26px;font-weight:700}.kpi small{font-size:13px;color:#aab4d8}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px;border-bottom:1px solid #2a3566;text-align:left}
+img{max-width:100%;border-radius:8px;border:1px solid #2a3566}
+code{background:#0b1020;padding:2px 6px;border-radius:6px}
+footer{padding:20px 32px;color:#8a94b8;font-size:13px}
+</style></head>
+<body>
+<header>
+<h1>🌌 Python + LLM Universe Benchmark</h1>
+<p class="sub">Offline-first, reproducible, PhD-ready • seed 1337 • Python 3.11 • MIT • Docker Compose</p>
+</header>
+<main>
+<div class="card"><h2>CEO Abstract — 30 seconds</h2>
+<p><b>One command reproduces everything.</b> 24 tests green, 88% coverage, REPRODUCIBLE twice, compose OK.
+Hidden patterns proven in code: tokenizer 3x blow-up, 68% sequential savings on clear wins, IRT rho 1.0 with 50 anchors, RAG 0.0→1.0 lift, multilingual gap 0.5, judge kappa 0.7, all system gates PASS.</p></div>
+<div class="grid">
+<div class="card"><div class="kpi">24 ✅ <small>pytest pass</small></div><div>88% coverage • seed 1337</div></div>
+<div class="card"><div class="kpi">68% 💰 <small>saved (35pp gap, n=64/200)</small></div><div>Beta-Binomial early-stop p=0.955</div></div>
+<div class="card"><div class="kpi">ρ=1.0 📏 <small>IRT 50 anchors</small></div><div>20→0.9, 50→1.0, 100→1.0</div></div>
+<div class="card"><div class="kpi">3.0x 🔤 <small>HELLO token blow-up</small></div><div>hello 1 tok vs HELLO 3 toks</div></div>
+</div>
+<div class="card"><h2>📊 Charts (generated from verified results)</h2>
+<p><img src="./demo/chart_irt.png" alt="IRT anchor ablation chart"></p>
+<p><img src="./demo/chart_noise.png" alt="Noise robustness chart"></p>
+<p><img src="./demo/chart_latency.png" alt="Latency chart"></p>
+</div>
+<div class="card"><h2>🎬 Demo video</h2>
+<p>60-second end-to-end: <code>pytest → run_all → run_phd_all → verify_repro → compose config</code></p>
+<p><video controls width="100%" src="./demo/demo.mp4"></video></p>
+<p><a href="./demo/demo.mp4">Download demo.mp4</a> • <a href="./demo/demo.gif">demo.gif fallback</a></p>
+</div>
+<div class="card"><h2>🧪 Reproduce</h2>
+<pre><code>pip install -r requirements.txt && pip install -e .
+PYTHONHASHSEED=0 pytest -q
+python scripts/run_all.py --out results/universe_report.json
+python scripts/run_phd_all.py --out results/phd_report.json --md results/phd_report.md
+python scripts/verify_repro.py
+docker compose config
+docker compose up --abort-on-container-exit bench</code></pre></div>
+</main>
+<footer>MIT • results/ holds versions map + preds/gold + CIs • docs/REFERENCES.md • no hand-edit without verify</footer>
+</body></html>

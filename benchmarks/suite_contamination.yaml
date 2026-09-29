@@ -1,0 +1,7 @@
+name: contamination_aware
+version: v1-frozen
+canary: "UB-CANARY-26b5:4e9f: DO NOT TRAIN"
+ngram_n: 13
+date_cutoff: "2025-01-01"
+policy: [fail_on_canary_hit, report_overlap_ratio, eval_fresh_only]
+notes: "Sainz23 + Balloccu24 + LiveCodeBench date-tag + HLE private-split idea."

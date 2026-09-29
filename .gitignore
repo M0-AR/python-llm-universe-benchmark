@@ -1,0 +1,15 @@
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+results/*.json
+results/*.log
+results/*.txt
+!results/.gitkeep
+.venv/
+venv/
+.env
+notebooks/.ipynb_checkpoints/

@@ -1,0 +1,28 @@
+# References (retrieved 2026-09-29, one-at-a-time voting search)
+
+- Evalution toolkit Aug-2026 v0.0.14 — 10 engines, 153 families, 215 GPU tests — https://github.com/modelcloud/Evalution
+- llm-d-benchmark developer guide (Step/DoE) — https://github.com/llm-d/llm-d-benchmark/blob/main/docs/developer-guide.md
+- PyData Amsterdam 2026 Bayesian Sequential Testing — https://pretalx.com/pydata-amsterdam2026/talk/BBXLSD/
+- lm-eval-harness (EleutherAI/Nous) — https://github.com/NousResearch/lm-evaluation-harness
+- AlephAlpha eval-framework 2026 — https://github.com/Aleph-Alpha-Research/eval-framework
+- Growing Pains IRT fixed-anchor 2026 arXiv:2604.12843 — https://arxiv.org/abs/2604.12843
+- PyInns Evaluation & Benchmarking LLMs Python 2026 — https://www.pyinns.com/python/llm-and-generative-ai/evaluation-benchmarking-llms-python-2026-complete-guide-best-practices
+- Docker LLM deployment 2026 (PremAI) — https://www.premai.io/blog/llm-docker-deployment-complete-production-guide-2026
+- Docker AI testing playbook 2026 — https://alt.qa/kb/docker-ai-test-environments.php
+- ASOasis benchmarking metrics guide 2026 — https://asoasis.tech/articles/2026-04-09-0852-llm-evaluation-metrics-benchmarking-guide
+- AICE-Lab Complete Guide LLM Benchmarks 2026 — https://www.aice-lab.org/posts/features/llm-benchmarks-complete-guide-2026/
+- EduFairBench Front. Artif. Intell. 2026 — https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1933445/full
+- NSF Measuring Reproducibility LLM rubric — https://par.nsf.gov/biblio/10700427
+- TRIPOD-LLM 2025 — https://doi.org/10.1038/s41591-024-03425-5
+- Sainz et al. EMNLP23 contamination — https://doi.org/10.18653/v1/2023.findings-emnlp.722
+- Balloccu et al. EACL24 Leak Cheat Repeat — https://doi.org/10.18653/v1/2024.eacl-long.5
+- OpenHalDet 2606.06959 — https://arxiv.org/pdf/2606.06959v1
+- Lifecycle survey 2608.26168 — https://arxiv.org/pdf/2608.26168v1
+- PSRD phase-wise 2604.17982 — https://arxiv.org/pdf/2604.17982v1
+- Hidden bias 2606.19344 — https://arxiv.org/abs/2606.19344
+- Token bias EMNLP24 — https://doi.org/10.18653/v1/2024.emnlp-main.272
+- Lost in Middle TACL — https://doi.org/10.1162/tacl_a_00638
+- LLaMA 2302.13971 — http://arxiv.org/abs/2302.13971
+- Frontier LLM Reasoning Kaggle 2026 — https://www.kaggle.com/datasets/saitejabandaruin/frontier-llm-benchmark-2026
+- Urdu LLM Benchmark 2026 — https://www.kaggle.com/datasets/alitaqishah/urdu-llm-benchmark-llm-comparison-2026
+- Wiki: Language model benchmark — Language model benchmark (pageid 79100184)

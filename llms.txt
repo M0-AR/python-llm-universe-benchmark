@@ -1,0 +1,7 @@
+# python-llm-universe-benchmark
+
+Reproducible Python 3.11 LLM benchmark (offline, Docker, MIT): book NLP basics + tokenizer bias (3x) + sequential early-stop (68% saved) + IRT rho=1.0 + RAG 0→1 + multilingual gap 0.5 + judge kappa 0.7 + gates PASS. 24 tests, 88% coverage, seed 1337.
+
+- Quickstart: pip install -r requirements.txt && pip install -e . && pytest -q && python scripts/run_all.py
+- Docs: docs/ZERO_TO_HERO.md, docs/PHD_ROADMAP.md, docs/report.html
+- License: MIT

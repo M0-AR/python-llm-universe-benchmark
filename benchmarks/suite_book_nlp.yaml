@@ -1,0 +1,10 @@
+name: book_nlp_basics
+version: v1-frozen
+seed: 1337
+prompts:
+  sentiment_v1: "Classify sentiment as positive/negative. Answer with one word. Text: {text}"
+decoding: {temperature: 0, top_p: 1, max_tokens: 8}
+splits: {train_n: 4, test_n: 2, frozen: true}
+metrics: [accuracy, macro_f1, bootstrap_ci95]
+contamination: {canary_required: true, ngram_n: 13}
+notes: "Mirrors Grigorov Ch.1 sentiment + TF-IDF baseline. Offline."

@@ -1,0 +1,57 @@
+services:
+  bench:
+    build: .
+    image: universe-bench:0.1.0
+    container_name: universe-bench
+    volumes:
+      - ./results:/work/results
+      - ./benchmarks:/work/benchmarks:ro
+    environment:
+      - PYTHONHASHSEED=0
+      - UB_SEED=1337
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - HF_TOKEN=${HF_TOKEN:-}
+    # Reproducible entry: verify env, run tests with coverage, then full offline suite
+    command: >
+      bash -c "python -V && pip freeze | sort | tee /work/results/versions.txt &&
+               pytest -q --cov=src --cov-report=term-missing | tee /work/results/pytest.txt &&
+               python scripts/run_all.py --out /work/results/universe_report.json | tee /work/results/run.log"
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 8G
+    networks: [benchnet]
+    read_only: false
+    tmpfs:
+      - /tmp
+
+  # Offline docs preview (no build needed)
+  docs:
+    image: python:3.11-slim
+    container_name: universe-docs
+    volumes:
+      - ./docs:/docs:ro
+      - ./README.md:/README.md:ro
+    working_dir: /docs
+    command: ["python", "-m", "http.server", "8001"]
+    ports:
+      - "8001:8001"
+    networks: [benchnet]
+
+  # Jupyter for zero-to-hero learning (token-free, passwordless only for local)
+  jupyter:
+    build: .
+    container_name: universe-jupyter
+    volumes:
+      - ./notebooks:/work/notebooks
+      - ./results:/work/results
+    ports:
+      - "8888:8888"
+    command: ["python", "-m", "http.server", "8888"]
+    networks: [benchnet]
+    profiles: ["lab"]
+
+networks:
+  benchnet:
+    driver: bridge

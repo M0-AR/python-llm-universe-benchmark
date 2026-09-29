@@ -1,0 +1,7 @@
+name: hallucination_lifecycle
+version: v1-frozen
+taxonomy: [factuality, faithfulness_intrinsic, faithfulness_extrinsic]
+stages: [data, training, inference]
+detectors: [lexical_coverage, negation_flip_heuristic, self_consistency_proxy]
+thresholds: {faithful_cov: 0.6, extrinsic_risk_cov: 0.3}
+notes: "Survey 2608.26168 + OpenHalDet 2606.06959 teaching subset. Human spot-check >=5%."

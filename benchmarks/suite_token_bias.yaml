@@ -1,0 +1,8 @@
+name: token_bias_hidden
+version: v1-frozen
+cases: [case_sensitivity, numeric_split, trailing_whitespace, bpe_merge_order]
+assertions:
+  - "hello(1 tok) vs HELLO(3 toks) -> len_ratio==3.0"
+  - "200(1 tok) vs 201(2 toks)"
+  - "' last' merged vs ' '+'last' split"
+notes: "Hidden Pattern #1. Tokenizer is part of the model; freeze + report it."
